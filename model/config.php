@@ -1,6 +1,6 @@
 <?php
 
 define('HOST', 'localhost');
-define('DBNAME', 'ajax');
+define('DBNAME', 'blogsjt');
 define('LOGIN', 'ymsmbrk');
 define('PASSWORD', 'root');

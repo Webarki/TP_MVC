@@ -2,9 +2,9 @@
 #        Script MySQL.
 #------------------------------------------------------------
 
-CREATE DATABASE `ajax` CHARACTER SET utf8;
+CREATE DATABASE `blogsjt` CHARACTER SET utf8;
 
-USE `ajax`;
+USE `blogsjt`;
 
 #------------------------------------------------------------
 # Table: ajax_user
@@ -16,7 +16,8 @@ CREATE TABLE ajax_user
         email       Varchar (100) NOT NULL UNIQUE ,
         pass       Varchar (255) NOT NULL ,
         created_at    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        role       Varchar (255) NOT NULL
+        token       Varchar (255) NOT NULL,
+        role       Varchar (5) NOT NULL DEFAULT 'user'
 )ENGINE=InnoDB;
 
-INSERT INTO `ajax_user`(`email`, `pass`, `role`) VALUES('test@test.com', '$2y$10$9GA2DkiD1MZXhaVb9vqmI.1n7GxDFQiBSUz9jGvRp7ShulNwGRqq6', 'admin');
+INSERT INTO `ajax_user`(`email`, `pass`, `token`) VALUES('test@test.com', '$2y$10$9GA2DkiD1MZXhaVb9vqmI.1n7GxDFQiBSUz9jGvRp7ShulNwGRqq6', 'nzklgveoihbvpiefjbp978989709uiH98908');
